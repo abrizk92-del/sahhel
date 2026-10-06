@@ -16,19 +16,16 @@ export function FTCBar({ lang = "en" }: { lang?: "en" | "ar" }) {
         <p className="m-0 text-[16.5px] font-semibold leading-relaxed">
           {isAr ? (
             <>
-              <strong className="text-[#FFC53D]">إفصاح:</strong> قد نحصل على
-              عمولة بسيطة عند الشراء من خلال هذه الروابط،{" "}
-              <strong className="text-[#FFC53D]">
-                دون أي تكلفة إضافية عليك
-              </strong>
-              .
+              <strong className="text-[#FFC53D]">روابط مدعومة:</strong> نحصل
+              على عمولة صغيرة —{" "}
+              <strong className="text-[#FFC53D]">سعرك لا يتغير</strong>.
             </>
           ) : (
             <>
-              <strong className="text-[#FFC53D]">Disclosure:</strong> We may
-              earn a small commission when you buy through these links,{" "}
+              <strong className="text-[#FFC53D]">Supported links:</strong> We
+              earn a small commission —{" "}
               <strong className="text-[#FFC53D]">
-                at no extra cost to you
+                your price never changes
               </strong>
               .
             </>
