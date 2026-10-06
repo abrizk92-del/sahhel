@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const cairo = Cairo({
@@ -10,9 +11,13 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Sahhel — Accessible Products for Seniors",
+  title: {
+    default: "Sahhel — Accessible Products for Seniors",
+    template: "%s | Sahhel",
+  },
   description:
     "Curated accessible products for seniors: big buttons, loud sounds, comfortable grips.",
+  metadataBase: new URL("https://sahhel.vercel.app"),
 };
 
 export default function RootLayout({
@@ -23,6 +28,7 @@ export default function RootLayout({
   return (
     <html className={cairo.variable} suppressHydrationWarning>
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-R9C8HBLZFF" />
     </html>
   );
 }
