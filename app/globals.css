@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0B0F14;
+  --color-surface: #151B23;
+  --color-surface-2: #1D2630;
+  --color-surface-3: #26313D;
+  --color-border: #33404E;
+  --color-border-strong: #4A5B6D;
+
+  --color-text: #FFFFFF;
+  --color-text-soft: #D3DCE6;
+  --color-text-dim: #9FB0C0;
+
+  --color-accent: #FFC53D;
+  --color-accent-ink: #0B0F14;
+  --color-accent-soft: #3A2E08;
+
+  --color-amazon: #FF9900;
+  --color-amazon-ink: #131A22;
+
+  --color-ok: #5BE49B;
+
+  --font-sans: var(--font-cairo), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0F14;
+  color: #FFFFFF;
+  font-family: var(--font-cairo), system-ui, sans-serif;
+  font-size: 19px;
+  line-height: 1.85;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid #FFC53D;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.wrap {
+  width: min(1240px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #151B23;
+  border: 2px solid #33404E;
+  border-radius: 20px;
+  padding: 24px;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #FFC53D;
+  background-color: #1D2630;
+  transform: translateY(-4px);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 0 28px;
+  background-color: #151B23;
+  color: #D3DCE6;
+  border: 2px solid #33404E;
+  border-radius: 999px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.chip:hover {
+  background-color: #1D2630;
+  border-color: #4A5B6D;
+  color: #FFFFFF;
+}
+
+.chip[aria-pressed="true"] {
+  background-color: #FFC53D;
+  color: #0B0F14;
+  border-color: #FFC53D;
+}
+
+.btn-amazon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 92px;
+  padding: 16px 24px;
+  background-color: #FF9900;
+  color: #131A22;
+  border: none;
+  border-radius: 22px;
+  font-size: 25px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  box-shadow: 0 8px 0 #B36B00;
+  transition: all 0.1s ease;
+}
+
+.btn-amazon:hover {
+  background-color: #FFAD33;
+}
+
+.btn-amazon:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #B36B00;
+}
