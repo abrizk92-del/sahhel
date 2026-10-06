@@ -27,6 +27,7 @@ export function ProductCard({
   const name = isAr ? product.nameAr : product.nameEn;
   const badge = product.badge ? (isAr ? product.badge.ar : product.badge.en) : null;
   const baseUrl = isAr ? "/ar" : "";
+  const hasImage = product.imageUrl && product.imageUrl.length > 0;
 
   return (
     <Link
@@ -37,14 +38,23 @@ export function ProductCard({
     >
       {/* Image area */}
       <div className="relative">
-        <span
-          className="grid place-items-center h-[180px] rounded-[14px] bg-gradient-to-br from-[#26313D] to-[#1D2630] border-2 border-[#33404E] text-[80px] mb-5"
+        <div
+          className="grid place-items-center h-[240px] rounded-[14px] bg-white border-2 border-[#33404E] mb-5 overflow-hidden"
           aria-hidden="true"
         >
-          {product.emoji}
-        </span>
+          {hasImage ? (
+            <img
+              src={product.imageUrl}
+              alt={name}
+              className="w-full h-full object-contain p-3"
+              loading="lazy"
+            />
+          ) : (
+            <span className="text-[80px]">{product.emoji}</span>
+          )}
+        </div>
         {badge && (
-          <span className="absolute top-3 start-3 bg-[#FFC53D] text-[#0B0F14] text-[13px] font-black px-3 py-1.5 rounded-full">
+          <span className="absolute top-3 start-3 bg-[#FFC53D] text-[#0B0F14] text-[13px] font-black px-3 py-1.5 rounded-full shadow-lg">
             {badge}
           </span>
         )}
