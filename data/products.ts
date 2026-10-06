@@ -33,6 +33,66 @@ export type Product = {
 
 export const PRODUCTS: Product[] = [
   {
+    id: "medicube-toner-pads",
+    slug: "medicube-zero-pore-pad-2",
+    nameEn: "Medicube Toner Pads Zero Pore Pad 2.0 — Dual-Textured Facial Pad with 4.5% AHA Lactic Acid & 0.45% BHA Salicylic Acid, Korean Skin Care, 70 Pads",
+    nameAr: "ميديكيوب ضمادات تونر زيرو بور باد 2.0 — ضمادة وجه مزدوجة الملمس بحمض اللاكتيك 4.5% وحمض الساليسيليك 0.45%، 70 ضمادة",
+    categoryId: "beauty",
+    emoji: "✨",
+    imageUrl: "https://m.media-amazon.com/images/I/71Mcspt-6AL._SX679_.jpg",
+    price: "$14.90",
+    rating: 4.6,
+    reviewCount: 33600,
+    badge: { en: "#1 Best Seller", ar: "الأكثر مبيعًا" },
+    asin: "B09V7Z4TJG",
+    stores: [
+      {
+        id: "amazon",
+        label: "Amazon",
+        labelAr: "أمازون",
+        url: "https://www.amazon.com/dp/B09V7Z4TJG",
+        price: "$14.90",
+      },
+    ],
+    featured: true,
+    benefitsEn: [
+      "Dual-textured pad: embossed side for gentle exfoliation, soft side for toning",
+      "4.5% AHA Lactic Acid + 0.45% BHA Salicylic Acid for clear, smooth pores",
+      "One-step routine — replaces toner, exfoliator, and cotton pad",
+      "70 pads per jar — lasts about 2 months with daily use",
+      "Korean skincare formula suitable for all skin types",
+    ],
+    benefitsAr: [
+      "ضمادة مزدوجة الملمس: جانب بارز للتقشير اللطيف، وجانب ناعم للتونر",
+      "4.5% حمض اللاكتيك + 0.45% حمض الساليسيليك لمسام نظيفة وناعمة",
+      "روتين بخطوة واحدة — يستبدل التونر والمقشر وقطنة القطن",
+      "70 ضمادة في العلبة — تدوم حوالي شهرين مع الاستخدام اليومي",
+      "تركيبة كورية للعناية بالبشرة مناسبة لجميع أنواع البشرة",
+    ],
+    prosEn: [
+      "#1 best-selling toner pad on Amazon",
+      "Over 100,000+ bought in the past month",
+      "4.6 stars from 33,600+ reviews",
+      "Very effective on blackheads and sebum",
+    ],
+    prosAr: [
+      "الأكثر مبيعًا في فئة ضمادات التونر على أمازون",
+      "أكثر من 100,000 عملية شراء خلال الشهر الماضي",
+      "4.6 نجوم من أكثر من 33,600 مراجعة",
+      "فعّال جدًا مع الرؤوس السوداء والدهون",
+    ],
+    consEn: [
+      "Contains exfoliating acids — not for very sensitive skin",
+      "Requires daily sunscreen use after AHA/BHA",
+    ],
+    consAr: [
+      "يحتوي على أحماض مقشرة — غير مناسب للبشرة الحساسة جدًا",
+      "يتطلب استخدام واقي شمس يوميًا بعد AHA/BHA",
+    ],
+    reviewEn: "This is the #1 best-selling toner pad on Amazon for a reason: it works, it is simple, and it fits into any routine. The dual-textured pad lets you gently exfoliate on one side and tone on the other, so you replace three products with one. With over 33,000 reviews at 4.6 stars and 100,000+ units bought in the last month alone, this is the safest bet in Korean skincare right now.",
+    reviewAr: "هذه هي ضمادة التونر الأكثر مبيعًا على أمازون لسبب واضح: فعّالة، بسيطة، وتدخل في أي روتين. الملمس المزدوج يتيح لك التقشير اللطيف من جهة والتونر من جهة أخرى، فتستبدل ثلاثة منتجات بواحد. مع أكثر من 33,000 مراجعة بتقييم 4.6 نجوم وأكثر من 100,000 عملية شراء خلال الشهر الماضي وحده، هذه هي الخيار الأكثر أمانًا في العناية الكورية بالبشرة حاليًا.",
+  },
+  {
     id: "runstar-bp-monitor",
     slug: "runstar-smart-blood-pressure-monitor",
     nameEn: "RunStar Smart Blood Pressure Monitor for Home Use — Upper Arm Cuff, Large 5-inch LED Display, with iOS & Android App",
@@ -43,7 +103,7 @@ export const PRODUCTS: Product[] = [
     price: "$89.99",
     rating: 4.4,
     reviewCount: 215,
-    badge: { en: "Best Overall", ar: "الأفضل عمومًا" },
+    badge: { en: "Best for Seniors", ar: "الأفضل لكبار السن" },
     asin: "B0GX5MNR27",
     stores: [
       {
