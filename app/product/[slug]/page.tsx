@@ -29,6 +29,8 @@ export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug(slug);
   if (!product) notFound();
 
+  const hasImage = product.imageUrl && product.imageUrl.length > 0;
+
   return (
     <>
       <SiteHeader lang="en" />
@@ -50,21 +52,35 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:items-start">
           <aside className="bg-[#151B23] border-2 border-[#33404E] rounded-[26px] p-8 text-center lg:sticky lg:top-[180px]">
             <div
-              className="grid place-items-center h-[230px] rounded-[20px] bg-gradient-to-br from-[#26313D] to-[#1D2630] border-2 border-[#33404E] text-[110px] mb-6"
+              className="grid place-items-center h-[300px] rounded-[20px] bg-white border-2 border-[#33404E] mb-6 overflow-hidden"
               aria-hidden="true"
             >
-              {product.emoji}
+              {hasImage ? (
+                <img
+                  src={product.imageUrl}
+                  alt={product.nameEn}
+                  className="w-full h-full object-contain p-4"
+                />
+              ) : (
+                <span className="text-[110px]">{product.emoji}</span>
+              )}
             </div>
             <div className="flex flex-wrap justify-center gap-2.5 mb-6">
               <span className="bg-[#1D2630] border-2 border-[#33404E] text-[#D3DCE6] text-[16px] font-bold px-4 py-1.5 rounded-full">
-                {getCategoryEmoji(product.categoryId)} {getCategoryLabel(product.categoryId, "en")}
+                {getCategoryEmoji(product.categoryId)}{" "}
+                {getCategoryLabel(product.categoryId, "en")}
               </span>
               <span className="bg-[#1D2630] border-2 border-[#33404E] text-[#D3DCE6] text-[16px] font-bold px-4 py-1.5 rounded-full">
                 ✓ Hand-picked
               </span>
             </div>
-            <span className="text-[#9FB0C0] text-[17px] font-bold">Approximate price</span>
-            <span className="block mt-1.5 text-[38px] font-black text-[#FFC53D]" dir="ltr">
+            <span className="text-[#9FB0C0] text-[17px] font-bold">
+              Approximate price
+            </span>
+            <span
+              className="block mt-1.5 text-[38px] font-black text-[#FFC53D]"
+              dir="ltr"
+            >
               {product.price}
             </span>
           </aside>
@@ -128,8 +144,9 @@ export default async function ProductPage({ params }: Props) {
               role="note"
               className="mt-7 bg-[#3A2E08] border-2 border-[#FFC53D] rounded-[14px] px-5 py-4 text-[16.5px] font-semibold text-[#FFE7A8] leading-relaxed"
             >
-              <strong className="text-[#FFC53D]">Disclosure:</strong> We may earn a small commission when you buy through this link,{" "}
-              <strong className="text-[#FFC53D]">at no extra cost to you</strong>.
+              <strong className="text-[#FFC53D]">Supported links:</strong> We
+              earn a small commission —{" "}
+              <strong className="text-[#FFC53D]">your price never changes</strong>.
             </div>
           </div>
         </div>

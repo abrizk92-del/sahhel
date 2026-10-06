@@ -6,11 +6,12 @@ export type Category = {
 };
 
 export const CATEGORIES: Category[] = [
-  { id: "all",     labelEn: "All",                 labelAr: "الكل",                emoji: "🔎" },
-  { id: "health",  labelEn: "Health & Safety",     labelAr: "الصحة والسلامة",       emoji: "🩺" },
-  { id: "home",    labelEn: "Home & Phone",        labelAr: "أدوات المنزل والهاتف", emoji: "🏠" },
-  { id: "kitchen", labelEn: "Kitchen Aids",        labelAr: "أدوات المطبخ المريحة", emoji: "🍽️" },
-  { id: "sleep",   labelEn: "Sleep & Comfort",     labelAr: "الراحة والنوم",        emoji: "🌙" },
+  { id: "all",     labelEn: "All",              labelAr: "الكل",                 emoji: "🔎" },
+  { id: "health",  labelEn: "Health & Safety",  labelAr: "الصحة والسلامة",        emoji: "🩺" },
+  { id: "beauty",  labelEn: "Beauty & Skincare", labelAr: "الجمال والعناية بالبشرة", emoji: "✨" },
+  { id: "home",    labelEn: "Home & Kitchen",   labelAr: "المنزل والمطبخ",        emoji: "🏠" },
+  { id: "kitchen", labelEn: "Kitchen Aids",     labelAr: "أدوات المطبخ المريحة",   emoji: "🍽️" },
+  { id: "sleep",   labelEn: "Sleep & Comfort",  labelAr: "الراحة والنوم",         emoji: "🌙" },
 ];
 
 export function getCategoryLabel(id: string, lang: "en" | "ar"): string {
