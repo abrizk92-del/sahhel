@@ -57,7 +57,7 @@ export default function PrivacyPage() {
       <p className="mb-6">We may update this Privacy Policy occasionally. Any changes will be reflected on this page with an updated "Last updated" date.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">11. Contact</h2>
-      <p className="mb-6">For any privacy-related questions, contact us at: support@creatorboost.com</p>
+      <p className="mb-6">For any privacy-related questions, contact us at: ab.rizk92@gmail.com</p>
 
       <p className="mt-8 text-gray-400 text-sm">This extension complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
     </div>
